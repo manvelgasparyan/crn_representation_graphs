@@ -25,7 +25,7 @@ function [F, pF] = interaction_graph (S, v)
    for i1 = 1:n_s
        for i2 = 1:n_s
            for j = 1:n_r
-               if any(S(i2, :) ~= 0 & diff(v, x(i1)) ~= 0)
+               if S(i2, :) ~= 0 && diff(v, x(i1)) ~= 0
                   edge_count = edge_count + 1;
                   edges(edge_count, :) = [i1, i2]; 
                end
