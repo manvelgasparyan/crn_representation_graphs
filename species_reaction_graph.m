@@ -50,12 +50,6 @@ function [G, pG] = species_reaction_graph (S)
    figure(1)
    %Plot the graph
    pG = plot(G, 'Layout', 'force');
-   %Edge label
-   %{
-   for i = 1:numel(w)
-       labeledge(pG,i,char(w(i)));
-   end
-   %}
    pG.EdgeFontSize = 7; 
    %Remove the initial labels
    pG.NodeLabel = {};
